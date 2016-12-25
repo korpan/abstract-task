@@ -1,0 +1,26 @@
+.sidebar{
+    float: left;
+    width: 20%;
+}
+
+
+.content{
+    float: left;
+    width: 80%;
+}
+
+ul.breadcrumbs {
+    list-style: none;
+    padding: 0px;
+}
+
+ul.breadcrumbs li{
+    float:left;
+    margin-left: 5px; 
+}
+
+.clearfix:after{
+    content: "";
+    display: table;
+    clear: both;
+}
