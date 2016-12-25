@@ -12,12 +12,12 @@
     </head>
     <body>
         <div class="sidebar">
-            <?$this->widget('\App\Components\Widgets\CategoriesNavigationWidget');?>
+            <?php $this->widget('\App\Components\Widgets\CategoriesNavigationWidget');?>
         </div>
         
         <div class="content">
             <div class="breadcrumbs">
-                <?$this->widget('\Engine\View\Widgets\BreadCrumbsWidget');?>
+                <?php $this->widget('\Engine\View\Widgets\BreadCrumbsWidget');?>
             </div>
             <?=$content;?>
         </div>

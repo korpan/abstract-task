@@ -6,7 +6,7 @@
 
 <h1>Articles</h1>
 
-<?
+<?php
     if(!empty($articles) && is_array($articles)){
         echo '<ul>';
         

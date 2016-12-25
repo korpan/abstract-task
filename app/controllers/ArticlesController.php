@@ -3,7 +3,6 @@
 namespace App\Controllers;
 
 use App\Models\Article;
-use Engine\Controllers\Controller;
 
 class ArticlesController extends BaseController{
 

@@ -24,7 +24,7 @@ class File {
     
     public static function realpath($path) {
         $path = str_replace(array('/', '\\'), DIRECTORY_SEPARATOR, $path);
-        $parts = array_filter(explode(DIRECTORY_SEPARATOR, $path), 'strlen');
+        $parts = explode(DIRECTORY_SEPARATOR, $path);
         $absolutes = array();
         foreach ($parts as $part) {
             if ('.' == $part) continue;
@@ -36,5 +36,5 @@ class File {
         }
         return implode(DIRECTORY_SEPARATOR, $absolutes);
     }
-   
+    
 }
