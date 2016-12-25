@@ -45,9 +45,9 @@ class MySqlConnection implements DatabaseConnectionInterface {
         $statement = $this->PDO->prepare($sql);
 
         try {
+            $columns = [];
             if ($statement->execute()) {
                 $raw_column_data = $statement->fetchAll();
-                $columns = [];
                 foreach ($raw_column_data as $column) {
                     foreach ($column as $key => $value) {
                         if ($key === 'Field') {
@@ -72,6 +72,7 @@ class MySqlConnection implements DatabaseConnectionInterface {
         $dbColumns = $this->getColumnNames($table);
 
         $where = [];
+        $params = [];
         foreach ($_where as $attribute => $value) {
             if (in_array($attribute, $dbColumns)) {
                 if($this->isMySqlExpression($value)){
