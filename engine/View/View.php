@@ -8,9 +8,11 @@ use Engine\Filesystem\File;
 
 class View {
     
+    protected $owner;
     protected $baseFilePath;
 
-    public function __construct() {
+    public function __construct($owner) {
+        $this->owner = $owner;
         
         $this->baseFilePath = Config::getBasePath();
     }

@@ -28,7 +28,9 @@ class ArticlesController extends BaseController{
     protected function getArticle($section, $category, $id){
         //because we need to make sure that article has correct section and category 
         //we will search not only by id but also by that section and category 
-        $article = reset(Article::model()->getArticles($section, $category, $id));
+        $articles = Article::model()->getArticles($section, $category, $id);
+        
+        $article = reset($articles);
        
         
         $this->render('articles.single', [

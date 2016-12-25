@@ -20,7 +20,7 @@ abstract class Widget{
             $this->$attr = $value;
         }
         
-        $this->view = new View();
+        $this->view = new View($this);
     }
     
     abstract public function run();

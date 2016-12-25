@@ -42,7 +42,7 @@ class Controller {
         $this->action = $action;
         $this->urlvalues = $urlvalues;
         
-        $this->view = new View();
+        $this->view = new View($this);
     }
 
     /**
